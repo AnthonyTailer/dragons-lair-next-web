@@ -6,13 +6,13 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>React Avançado - Boilerplate</title>
+        <title>Dragons Lair</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+          content="Plataforma de gerenciamento de dragões utilizando Typescript, React, NextJS e Styled Components!"
         />
       </Head>
       <GlobalStyles />
