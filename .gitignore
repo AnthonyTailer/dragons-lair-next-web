@@ -38,3 +38,4 @@ public/sw.js
 public/workbox-*.js
 
 /.history
+dragons.sqlite
