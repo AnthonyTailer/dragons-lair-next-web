@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Button = styled.button`
   background-color: #ed1923;
   width: min(20rem, 100%);
-  color: white;
+  color: ${(props) => (props.disabled ? '#8a949a' : 'white')};
   border: none;
   border-radius: 25px;
   margin-bottom: 5px;
@@ -16,5 +16,10 @@ export const Button = styled.button`
   :hover {
     background-color: #ab151c;
     cursor: pointer;
+  }
+
+  :disabled {
+    background-color: #ab151c;
+    cursor: not-allowed;
   }
 `
