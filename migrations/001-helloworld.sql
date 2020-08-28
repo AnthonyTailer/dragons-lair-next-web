@@ -7,7 +7,7 @@ CREATE TABLE user (
     createdAt TEXT
 );
 
-INSERT INTO user (name, email, password, createdAt) values('Daenerys Targaryen', 'daenerys@got.com', '$2y$12$MVkPbNbPznLHfeDDocfAS.BSyvGcGfvR7ZFOvY5.qTi7WVpZuqykO', datetime('now', 'localtime'));
+INSERT INTO user (name, email, password, createdAt) values('Daenerys Targaryen', 'daenerys@got.com', '$2b$12$g5bHQ/T8xSmk6JnJNTxH2.cc82rqxrd5W7MKl2exBx1U0BiNPw3Gi', datetime('now', 'localtime'));
 
 CREATE TABLE dragon (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
