@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { InputProps } from './index'
 
 export const Input = styled.input<InputProps>`
-  background-color: #6a7b85;
+  background-color: #3a3b3c;
   color: ${(props) => (props.hasError ? '#ed1923' : 'white')};
   border: none;
   border-bottom: ${(props) => (props.hasError ? '2px solid #ed1923' : 'none')};
-  border-radius: 25px;
+  border-radius: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  width: min(20rem, 100%);
+  width: 100%;
 
   :hover {
     background-color: #6a6a6a;
@@ -26,10 +26,10 @@ export const Input = styled.input<InputProps>`
 
   ::placeholder,
   ::-webkit-input-placeholder {
-    color: ${(props) => (props.disabled ? '#8a949a' : 'white')};
+    color: ${(props) => (props.disabled ? '#8a949a' : '#eee')};
   }
   :-ms-input-placeholder {
-    color: ${(props) => (props.disabled ? '#8a949a' : 'white')};
+    color: ${(props) => (props.disabled ? '#8a949a' : '#eee')};
   }
 
   -webkit-box-shadow: 8px 6px 11px -1px rgba(0, 0, 0, 0.75);

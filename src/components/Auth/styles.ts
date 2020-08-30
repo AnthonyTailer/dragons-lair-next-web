@@ -14,6 +14,7 @@ export const Form = styled.form`
   justify-content: center;
   display: flex;
   flex-direction: column;
+  max-width: min(20rem, 100%);
 `
 
 export const Logo = styled.img`
