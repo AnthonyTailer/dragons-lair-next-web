@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-  background-color: #ed1923;
+  background-color: #f02849;
   width: min(20rem, 100%);
   color: ${(props) => (props.disabled ? '#8a949a' : 'white')};
   border: none;
@@ -14,12 +14,12 @@ export const Button = styled.button`
   box-shadow: 8px 6px 11px -1px rgba(0, 0, 0, 0.75);
 
   :hover {
-    background-color: #ab151c;
+    background-color: #b71f38;
     cursor: pointer;
   }
 
   :disabled {
-    background-color: #ab151c;
+    background-color: #b71f38;
     cursor: not-allowed;
   }
 `
