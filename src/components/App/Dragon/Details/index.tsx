@@ -43,7 +43,7 @@ const Details: React.FC<DetailsProps> = ({ dragon, onClose, title }) => {
       <>
         <S.ListItem style={{ justifyContent: 'center', borderBottom: 0 }}>
           <S.ListItemAvatar
-            src={detailedDragon?.avatarUrl ?? '/img/icon-192.png'}
+            src={detailedDragon?.avatarUrl || '/img/icon-192.png'}
           />
         </S.ListItem>
         <S.ListItem>

@@ -20,9 +20,14 @@ const Login = ({
   const route = useRouter()
 
   const { signIn, loading, isAuthenticated, error: failedMessage } = useAuth()
-  const { register, handleSubmit, watch, errors, setError } = useForm<
-    LoginForm
-  >()
+  const {
+    register,
+    handleSubmit,
+    watch,
+    errors,
+    setError,
+    clearErrors
+  } = useForm<LoginForm>()
 
   const formValues = watch()
 
@@ -38,6 +43,10 @@ const Login = ({
       setError('password', { type: 'manual' })
     }
   }, [failedMessage, setError])
+
+  useEffect(() => {
+    clearErrors()
+  }, [clearErrors])
 
   const handleLogin = (data: LoginForm): void => {
     const { email, password } = data
