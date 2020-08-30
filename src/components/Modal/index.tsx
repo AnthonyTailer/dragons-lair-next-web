@@ -1,13 +1,12 @@
 import * as S from './styles'
 
 type ModalProps = {
-  open: boolean
   onClose: () => void
   title: string
 }
 
-const Modal: React.FC<ModalProps> = ({ open, children, onClose, title }) => {
-  return open ? (
+const Modal: React.FC<ModalProps> = ({ children, onClose, title }) => {
+  return (
     <S.Wrapper>
       <S.Content>
         <S.Header>
@@ -17,7 +16,7 @@ const Modal: React.FC<ModalProps> = ({ open, children, onClose, title }) => {
         {children}
       </S.Content>
     </S.Wrapper>
-  ) : null
+  )
 }
 
 export default Modal

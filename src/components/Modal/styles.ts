@@ -13,12 +13,12 @@ export const Wrapper = styled.section`
 `
 
 export const Content = styled.main`
-  background-color: #fefefe;
+  background-color: #18191a;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
-  width: min(300px, 80%); /* Could be more or less, depending on screen size */
-  min-height: 60%;
+  border: 1px solid #2f3133;
+  width: min(600px, 80%); /* Could be more or less, depending on screen size */
+  min-height: auto;
   border-radius: 11px 11px 11px 11px;
 `
 
@@ -36,14 +36,14 @@ export const CloseBtn = styled.span`
 
   :hover,
   :focus {
-    color: black;
+    color: #b71f38;
     text-decoration: none;
     cursor: pointer;
   }
 `
 export const Title = styled.div`
+  color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  color: black;
   align-self: center;
 `
