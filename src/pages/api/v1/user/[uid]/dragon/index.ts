@@ -43,11 +43,9 @@ export default authenticated(async function dragon(
           })
         } else {
           const userDragons = await db.all(
-            'SELECT id, name, type, createdAt FROM dragon WHERE ownerId = ?',
+            'SELECT * FROM dragon WHERE ownerId = ? ORDER BY name',
             [decodedUser.sub]
           )
-
-          console.log('USER DRAGONS --> ', userDragons)
 
           res.status(200).json({ dragons: userDragons })
         }
@@ -56,8 +54,33 @@ export default authenticated(async function dragon(
       }
       break
     }
+    case 'POST': {
+      try {
+        const { decodedToken, name, type, description, avatarUrl } = body
+        console.log(body)
+
+        if (!decodedToken || !name || !type) {
+          res.status(422).json({
+            message: 'Invalid data'
+          })
+        } else {
+          const newDragon = await db.all(
+            `INSERT INTO dragon 
+              (name, type, description, avatarUrl, ownerId, createdAt)
+              VALUES (?, ?, ?, ?, ?, datetime('now', 'localtime'))
+            `,
+            [name, type, description, avatarUrl, decodedToken.sub]
+          )
+
+          res.status(201).json({ dragon: newDragon })
+        }
+      } catch (e) {
+        res.status(500).json({ message: e?.message })
+      }
+      break
+    }
     default: {
-      res.setHeader('Allow', ['GET'])
+      res.setHeader('Allow', ['GET', 'POST'])
       res.status(405).end(`Method ${method} Not Allowed`)
     }
   }
