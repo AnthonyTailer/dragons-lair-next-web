@@ -92,6 +92,7 @@ export const AuthProvider: React.FC = ({ children }) => {
    */
   function signOut() {
     Cookies.remove('dragons-token')
+    Cookies.remove('dragons-user')
     setUser(null)
     route.replace('/')
   }
